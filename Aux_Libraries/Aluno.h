@@ -1,3 +1,4 @@
+#include <stdbool.h>
 #define MAX_SIZE 150
 
 struct Aluno{
