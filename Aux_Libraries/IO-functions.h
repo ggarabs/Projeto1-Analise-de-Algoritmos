@@ -42,6 +42,7 @@ void entrada(FILE* input, aluno* lista){
 }
 
 void saida(aluno* vetor, int tamanho, FILE *output){
+    fprintf(output, "SEMESTRE,TURMA,PERIODO,NOME,DISCIPLINA,MEDIA\n");
 	int i = 0;
 	while(i < tamanho){
         fprintf(output, "%d,", vetor->semestre);
