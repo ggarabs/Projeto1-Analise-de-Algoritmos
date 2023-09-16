@@ -1,0 +1,11 @@
+
++--------------------------------------------------------------+
+|     Digite um número para selecionar um item do menu:        |
++--------------------------------------------------------------+
+| 1 - Ordenar por nome                                         |
+| 2 - Ordenar por semestre                                     |
+| 3 - Ordenar por semestre, turma, período, disciplina e nome  |
+| 4 - Ordenar por disciplina e média final(decrescente)        |
+| 5 - Ordenar por período, semestre, turma, disciplina e nome  |
++--------------------------------------------------------------+
+                        Sua escolha: 
