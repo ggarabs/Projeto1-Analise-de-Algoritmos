@@ -1,13 +1,16 @@
+//Biblioca que realiza as funçoes de sistema
 #define MAX_SIZE 150
 
-const char INPUT[] = "./IO-archives/entrada.csv", OUTPUT[] = "./IO-archives/saida.csv";
+const char INPUT[] = "./IO-archives/entrada.csv", OUTPUT[] = "./IO-archives/saida.csv"; //Passa o arquivo CSV
 
-void entrada(FILE* input, aluno* lista){
+void entrada(FILE* input, aluno* lista){ //Recebe a entrada com o arquivo CSV e aloca memoria
 	input = fopen(INPUT, "r");
-
+	
+	//Aloca a memoria atraves de calloc
 	char* line = (char*)calloc(MAX_SIZE, sizeof(char));
 	char* buffer = (char*)calloc(MAX_SIZE, sizeof(char));
 
+	//Adiciona as informações dos alunos na estruturas obedecendo a separação por virgulas do CSV
 	while(!feof(input)){
 		fgets(line, MAX_SIZE, input);
 
@@ -41,6 +44,7 @@ void entrada(FILE* input, aluno* lista){
 	}
 }
 
+//Grava a saída em um CSV já ordenado qundo a função é chamada
 void saida(aluno* vetor, int tamanho, FILE *output){
     fprintf(output, "SEMESTRE,TURMA,PERIODO,NOME,DISCIPLINA,MEDIA\n");
 	int i = 0;
@@ -53,5 +57,5 @@ void saida(aluno* vetor, int tamanho, FILE *output){
 		fprintf(output, "%.1f\n", vetor->media);
 		i++; vetor++;
 	}
-	printf("\n             Lista de alunos ordenada com sucesso!\n\n");
+	printf("\n             Lista de alunos ordenada com sucesso!\n\n"); //Mostra que a lista foi ordenada com sucesso
 }
