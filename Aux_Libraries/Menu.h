@@ -1,6 +1,7 @@
-const char MENU[] = "./Secundary_archives/menu.txt";
+//Biblioteca do menu
+const char MENU[] = "./Secundary_archives/menu.txt"; //O menu foi configurado através de um txt
 
-void Menu(aluno* lista, int tam){
+void Menu(aluno* lista, int tam){ //Realiza a leitura do arquivo de menu e imprime na tela do usuario
 	int resp = 0;
 
 	while(resp < 1 || resp > 5){
@@ -17,8 +18,8 @@ void Menu(aluno* lista, int tam){
 
 		fclose(arq);
 	
-		scanf("%d", &resp);
-		switch(resp){
+		scanf("%d", &resp); //Guarda a resposta dada pelo usuario
+		switch(resp){ //Passa os parametros de acordo com a ordenação desejada
 			case 1:
 				MergeSort(lista, tam, by_name);
 				break;
@@ -35,7 +36,7 @@ void Menu(aluno* lista, int tam){
 				MergeSort(lista, tam, by_all_v2);
 				break;
 			
-			default:
+			default: //Se digitou invalido, apresenta para o usuario digitar novamente
 				printf("Valor inválido, por favor digite novamente: ");
 		}
 	}
