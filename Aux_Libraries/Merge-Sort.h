@@ -1,6 +1,9 @@
-typedef aluno (*Comparador)(aluno, aluno);
+//Biblioteca MergeSort realiza a ordenação, este foi o metódo escolhido para ordenação
 
-void MergeSort(aluno* vetor, int tam, Comparador mtd){
+typedef aluno (*Comparador)(aluno, aluno); //Passa o ponteiro do comparador toda vez que é realizado uma nova compração para poupar o uso do MergeSort
+
+void MergeSort(aluno* vetor, int tam, Comparador mtd){ //Função MergeSort
+	//Realiza a ordenação por meio de divisões no vetor 1 e 2
     if (tam <= 1) return;
 
     int meio = tam / 2;
