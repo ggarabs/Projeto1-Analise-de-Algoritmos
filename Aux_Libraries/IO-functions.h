@@ -10,7 +10,7 @@ void entrada(FILE* input, aluno* lista){ //Recebe a entrada com o arquivo CSV e 
 	char* line = (char*)calloc(MAX_SIZE, sizeof(char));
 	char* buffer = (char*)calloc(MAX_SIZE, sizeof(char));
 
-	//Adiciona as informações dos alunos na estruturas obedecendo a separação por virgulas do CSV
+	//Faz um split da linha do csv e desestrutura as características do objeto, colocando na lista
 	while(!feof(input)){
 		fgets(line, MAX_SIZE, input);
 

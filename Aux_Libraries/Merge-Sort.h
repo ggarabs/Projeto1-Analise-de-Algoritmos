@@ -1,31 +1,33 @@
 //Biblioteca MergeSort realiza a ordenação, este foi o metódo escolhido para ordenação
 
-typedef aluno (*Comparador)(aluno, aluno); //Passa o ponteiro do comparador toda vez que é realizado uma nova compração para poupar o uso do MergeSort
+// Generaliza a função de comparação como um ponteiro com argumentos fortemente tipados.
+typedef aluno (*Comparador)(aluno, aluno); 
 
-void MergeSort(aluno* vetor, int tam, Comparador mtd){ //Função MergeSort
-	//Realiza a ordenação por meio de divisões no vetor 1 e 2
-    if (tam <= 1) return;
+void MergeSort(aluno* vetor, int tam, Comparador mtd){ //Função MergeSort, comparador é uma função.
+    if (tam <= 1) return; // Se o vetor for unitário, então já está ordenado
 
     int meio = tam / 2;
 
+    // Aloca dinamicamente dois vetores pra guardar cada metade da sublista que se busca ordenar
 	aluno* vetor1 = (aluno*)calloc(meio+1, sizeof(aluno));
 	aluno* vetor2 = (aluno*)calloc(meio+1, sizeof(aluno));
 
+    // Copia cada elemento do vetor original para os dois subvetores
     for (int i = 0; i < meio; i++) *(vetor1+i) = *(vetor+i);
     for (int i = meio; i < tam; i++) *(vetor2+i-meio) = *(vetor+i);
 
     MergeSort(vetor1, meio, mtd);
   	MergeSort(vetor2, tam-meio, mtd);
 
-    int p1 = 0, p2 = meio;
+    int p1 = 0, p2 = meio; // ponteiros para cada um dos subvetores
 
-    while (p1 < meio && p2 < tam){
-        if (isEqual(mtd(*vetor1, *vetor2), *vetor1)){
-            *vetor = *vetor1;
+    while (p1 < meio && p2 < tam){ // enquanto nenhum dos subvetores estão "vazios"
+        if (isEqual(mtd(*vetor1, *vetor2), *vetor1)){ // se vetor1 < vetor2, coloca vetor1 no vetor resultante
+            *vetor = *vetor1; 
 			vetor1++;
 			p1++;
         } 
-        else{
+        else{ // caso contrário, copie vetor2
             *vetor = *vetor2;
 			vetor2++;
 			p2++;
@@ -33,14 +35,14 @@ void MergeSort(aluno* vetor, int tam, Comparador mtd){ //Função MergeSort
 		vetor++;
     }
 
-    while (p1 < meio){
+    while (p1 < meio){ // se sobrar elementos em vetor1, copie todos para o vetor original
         *vetor = *vetor1;
 		vetor++;
 		vetor1++;
         p1++;
     }
 
-    while (p2 < tam){
+    while (p2 < tam){ // se sobrar em vetor2, copie todos dele para vetor original
         *vetor = *vetor2;
 		vetor2++;
 		vetor++;

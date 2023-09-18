@@ -8,7 +8,7 @@ INTEGRANTES:
 
 */
 
-//Bibliotecas usadas:
+//Bibliotecas e Arquivos usados:
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -20,12 +20,12 @@ INTEGRANTES:
 #include "./Aux_Libraries/Menu.h"
 #define MAX_SIZE 150
 
-int main(){ //Função main do programa
+int main(){
 	FILE *input, *output; //Ponteiro para os arquivos de entrada e saida
 
 	input = fopen(INPUT, "r"); //Le o arquivo de entrada
 
-	if(input == NULL){ //Se o arquivo estiver vazio apresenta a mensagem de erro
+	if(input == NULL){
 		printf("Erro ao tentar abrir o arquivo.\n");
 		return -1;
 	}
@@ -38,7 +38,7 @@ int main(){ //Função main do programa
 		fgets(line, MAX_SIZE, input);
 		n_lines++;
 	}
-	fclose(input); //Fecha o arquivo de entrada
+	fclose(input); //Fecha o arquivo de entrada para reabrir em seguida
 
 	aluno* lista = (aluno*)calloc(n_lines, sizeof(aluno)); //Cria a lista de alunos alocando a memoria dinamicamente
 

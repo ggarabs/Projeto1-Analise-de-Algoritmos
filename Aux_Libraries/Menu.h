@@ -11,7 +11,7 @@ void Menu(aluno* lista, int tam){ //Realiza a leitura do arquivo de menu e impri
 
 		if(NULL == arq) return;
 
-		while(!feof(arq)){
+		while(!feof(arq)){ // Imprime o Menu linha a linha
 			char line[MAX_SIZE];
 			if(NULL != fgets(line, MAX_SIZE, arq)) printf("%s", line);
 		}
