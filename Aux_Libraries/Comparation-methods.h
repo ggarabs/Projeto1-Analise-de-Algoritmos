@@ -1,3 +1,13 @@
+/* PROJETO 1 DE PROJETO E ANÁLISE DE ALGORIMOS
+
+INTEGRANTES: 
+
+	- Anderson Correa Nicodemo		| 3228567-1
+	- Felipe do Nascimento Fonseca	| 4221536-6
+	- Gustavo Garabetti Munhoz		| 4221195-6
+
+*/
+
 //Bibliotca dos metodos de comparação
 aluno by_name(aluno a, aluno b){ //Ordena o aluno por nome
 	return strcmp(a.nome, b.nome) <= 0 ? a : b;

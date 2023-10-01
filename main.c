@@ -3,7 +3,7 @@
 INTEGRANTES: 
 
 	- Anderson Correa Nicodemo		| 3228567-1
-	- Felipe do Nascimento Fonseca		| 4221536-6
+	- Felipe do Nascimento Fonseca	| 4221536-6
 	- Gustavo Garabetti Munhoz		| 4221195-6
 
 */

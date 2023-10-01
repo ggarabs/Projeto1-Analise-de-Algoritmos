@@ -1,3 +1,13 @@
+/* PROJETO 1 DE PROJETO E ANÁLISE DE ALGORIMOS
+
+INTEGRANTES: 
+
+	- Anderson Correa Nicodemo		| 3228567-1
+	- Felipe do Nascimento Fonseca	| 4221536-6
+	- Gustavo Garabetti Munhoz		| 4221195-6
+
+*/
+
 #include <stdbool.h>
 #define MAX_SIZE 150 //Define o tamanho maximo do vetor de caracteres como 150
 

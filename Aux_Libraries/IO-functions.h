@@ -1,3 +1,13 @@
+/* PROJETO 1 DE PROJETO E ANÁLISE DE ALGORIMOS
+
+INTEGRANTES: 
+
+	- Anderson Correa Nicodemo		| 3228567-1
+	- Felipe do Nascimento Fonseca	| 4221536-6
+	- Gustavo Garabetti Munhoz		| 4221195-6
+
+*/
+
 //Biblioca que realiza as funçoes de sistema
 #define MAX_SIZE 150
 

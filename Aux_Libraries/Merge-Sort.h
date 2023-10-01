@@ -1,3 +1,13 @@
+/* PROJETO 1 DE PROJETO E ANÁLISE DE ALGORIMOS
+
+INTEGRANTES: 
+
+	- Anderson Correa Nicodemo		| 3228567-1
+	- Felipe do Nascimento Fonseca	| 4221536-6
+	- Gustavo Garabetti Munhoz		| 4221195-6
+
+*/
+
 //Biblioteca MergeSort realiza a ordenação, este foi o metódo escolhido para ordenação
 
 // Generaliza a função de comparação como um ponteiro com argumentos fortemente tipados.
